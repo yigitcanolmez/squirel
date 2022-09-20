@@ -14,7 +14,7 @@ namespace squirel
         {
             try
             {
-                using (var manager = await UpdateManager.GitHubUpdateManager("d"))
+                using (var manager = await UpdateManager.GitHubUpdateManager("https://github.com/yigitcanolmez/squirel"))
                 {
                     var release = await manager.UpdateApp();
                 }
@@ -28,7 +28,7 @@ namespace squirel
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            CheckForUpdates();
         }
     }
 }
